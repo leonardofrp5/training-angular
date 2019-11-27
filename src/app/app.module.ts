@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormRegisterComponent } from './form-register/form-register.component';
+import { FormRegisterComponent } from './screens/form-register/form-register.component';
 
 @NgModule({
   declarations: [

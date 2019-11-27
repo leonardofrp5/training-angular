@@ -18,6 +18,10 @@ export class FormRegisterComponent implements OnInit {
 
   constructor( private fb: FormBuilder ) { }
 
+  ngOnInit() {
+    this.buildForm();
+  }
+
   private buildForm(){
     this.registerForm = this.fb.group({
       'firstName': [null, Validators.compose([Validators.required, Validators.minLength(3)])],
@@ -34,9 +38,4 @@ export class FormRegisterComponent implements OnInit {
     this.passwordConfirmation = post.passwordConfirmation;
     console.log(post);
   }
-
-  ngOnInit() {
-    this.buildForm();
-  }
-
 }
