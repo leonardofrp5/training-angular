@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  ROOT_URL: 'http://polls.apiblueprint.org/api/v1/users',
+  URL_GET_DATA: 'http://jsonplaceholder.typicode.com/posts'
 };
 
 /*
