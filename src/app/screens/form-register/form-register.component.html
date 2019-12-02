@@ -36,7 +36,7 @@
         <input class="button button-login" type="submit" [disabled]="!registerForm.valid" value="Login"/>
       </div>
     </form>
-    <button (click)="getPosts()">click</button>
+    <button (click)="getData()">click</button>
     <div ng-repeat="post in posts ">
       {{ post | json }}
     </div>

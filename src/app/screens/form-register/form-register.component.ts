@@ -35,7 +35,7 @@ export class FormRegisterComponent implements OnInit {
     this.registerService.userRegister(this.registerForm.value).subscribe(e => console.log('ok'));
   }
 
-  getPosts() {
+  getData() {
      this.getdataService.getData().subscribe(e => {
        this.post = e
       });
