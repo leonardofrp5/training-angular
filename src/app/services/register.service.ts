@@ -9,7 +9,8 @@ export class RegisterService {
 
   constructor(private http: HttpClient) { }
 
-  userRegister(data) {
+  userRegister(user) {
+    const data = { user };
     return this.http.post(environment.ROOT_URL, data);
   }
 }

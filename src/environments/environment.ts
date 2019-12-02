@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  ROOT_URL: 'http://polls.apiblueprint.org/api/v1/users',
+  ROOT_URL: 'https://wbooks-api-stage.herokuapp.com/api/v1/users',
   URL_GET_DATA: 'http://jsonplaceholder.typicode.com/posts'
 };
 
