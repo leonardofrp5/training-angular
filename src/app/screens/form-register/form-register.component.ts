@@ -39,6 +39,5 @@ export class FormRegisterComponent implements OnInit {
      this.getdataService.getData().subscribe(e => {
        this.post = e
       });
-    console.log(this.registerForm.value);
   }
 }
