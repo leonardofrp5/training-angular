@@ -10,10 +10,6 @@ export class FormRegisterComponent implements OnInit {
 
   registerForm: FormGroup;
   post: any;
-  firstName: string = '';
-  lastName: string = '';
-  email: string = '';
-  passwordConfirmation: string = '';
   messageAlert: string = 'Campo obligatorio'
 
   constructor( private fb: FormBuilder ) { }
@@ -31,11 +27,7 @@ export class FormRegisterComponent implements OnInit {
     });
   }
 
-  addPost(post) {
-    this.firstName = post.firstName;
-    this.lastName = post.lastName;
-    this.email = post.email;
-    this.passwordConfirmation = post.passwordConfirmation;
-    console.log(post);
+  addPost() {
+    console.log(this.registerForm.value);
   }
 }
