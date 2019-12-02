@@ -12,13 +12,7 @@ export class FormRegisterComponent implements OnInit {
 
   registerForm: FormGroup;
   post: any;
-  first_name: string = '';
-  last_name: string = '';
-  email: string = '';
-  password_confirmation: string = '';
-  password: string = '';
-  locale: string = '';
-  messageAlert: string = 'Campo obligatorio';
+  messageAlert: string = 'Campo obligatorio'
 
   constructor( private fb: FormBuilder, private registerService: RegisterService, private getdataService: GetdataService) { }
 
@@ -39,12 +33,12 @@ export class FormRegisterComponent implements OnInit {
 
   addPost() {
     this.registerService.userRegister(this.registerForm.value).subscribe(e => console.log('ok'));
-
   }
 
   getPosts() {
      this.getdataService.getData().subscribe(e => {
        this.post = e
       });
+    console.log(this.registerForm.value);
   }
 }

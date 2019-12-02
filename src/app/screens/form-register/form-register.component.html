@@ -1,6 +1,6 @@
 <div class="from-container" *ngIf="!name; else forminfo">
     <img class="logo-wolox" alt="logo-wolox" src="assets/LogoWolox-Original.png">
-    <form [formGroup]='registerForm'  (ngSubmit)='addPost(registerForm.value)'>
+    <form [formGroup]='registerForm' (ngSubmit)='addPost()'>
       <div class="section-input">
         <label class="text-label">Nombre</label>
         <input class="decoration-input" type="text" formControlName="first_name" />
