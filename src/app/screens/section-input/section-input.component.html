@@ -1,0 +1,5 @@
+<div class="section-input">
+  <label class="text-label">{{ myLabel }}</label>
+  <input class="decoration-input" [type]="typeInput" [value]="myTextValue" (blur)="onBlur()" (input)="handleChange($event)" />
+  <span class="message-alert" *ngIf="isValid">{{ messageAlert }}</span>
+</div>

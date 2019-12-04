@@ -12,9 +12,8 @@ export class FormRegisterComponent implements OnInit {
 
   registerForm: FormGroup;
   post: any;
-  messageAlert: string = 'Campo obligatorio'
 
-  constructor( private fb: FormBuilder, private registerService: RegisterService, private getdataService: GetdataService) { }
+  constructor( private fb: FormBuilder, private registerService: RegisterService, private GetDataService: GetdataService) { }
 
   ngOnInit() {
     this.buildForm();
@@ -32,14 +31,13 @@ export class FormRegisterComponent implements OnInit {
   }
 
   addPost() {
-    this.registerService.userRegister(this.registerForm.value).subscribe(e => {
-      console.log('Succesfull');
-    });
+    this.registerService.userRegister(this.registerForm.value).subscribe(responsePost => console.log('Succesfull', responsePost) );
+    console.log(this.registerForm.value);
   }
 
   getData() {
-     this.getdataService.getData().subscribe(e => {
-       this.post = e
+     this.GetDataService.getData().subscribe(data => {
+       this.post = data
       });
   }
 }
