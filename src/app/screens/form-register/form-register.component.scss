@@ -18,34 +18,6 @@
   padding: 10px;
 }
 
-.section-input{
-  display: flex;
-  flex-direction: column;
-  height: 80px;
-  padding: 5px 25px;
-
-  .text-label{
-    display: flex;
-    font-family: 'Roboto', sans-serif;
-    size: $ContentText;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    color: $Black;
-  }
-
-  .decoration-input{
-    border: none;
-    border-radius: 5px;
-    height: 32px;
-    width: 252px;
-  }
-}
-
-.message-alert{
-  color: $Red;
-  font-size: $TextAlert;
-}
-
 .button{
   border-radius: 5px;
   font-size: $ContentText;

@@ -1,29 +1,19 @@
 <div class="from-container" *ngIf="!name; else forminfo">
     <img class="logo-wolox" alt="logo-wolox" src="assets/LogoWolox-Original.png">
     <form [formGroup]='registerForm' (ngSubmit)='addPost()'>
-      <div class="section-input">
-        <label class="text-label">Nombre</label>
-        <input class="decoration-input" type="text" formControlName="firstName" />
-        <span class="message-alert" *ngIf="!registerForm.controls.firstName.valid && registerForm.controls.firstName.touched">{{ messageAlert }}</span>
-      </div>
-      <div class="section-input">
-        <label class="text-label">Apellido</label>
-        <input class="decoration-input" type="text" formControlName="lastName" />
-        <span class="message-alert" *ngIf="!registerForm.controls.lastName.valid && registerForm.controls.lastName.touched">{{ messageAlert }}</span>
-      </div>
-      <div class="section-input">
-        <label v>Correo</label>
-        <input class="decoration-input" type="text" formControlName="email" />
-        <span class="message-alert"s *ngIf="!registerForm.controls.email.valid && registerForm.controls.email.touched">{{ messageAlert }}</span>      
-      </div>
-      <div class="section-input">
-        <label class="text-label">Contraseña</label>
-        <input class="decoration-input" type="password" formControlName="passwordConfirmation" />
-        <span class="message-alert" *ngIf="!registerForm.controls.passwordConfirmation.valid && registerForm.controls.passwordConfirmation.touched">{{ messageAlert }}</span>
-      </div>
+      <app-section-input [myLabel]="'Nombre'" [typeInput]="'text'" formControlName="first_name" ></app-section-input>
+      <app-section-input [myLabel]="'Apellido'" [typeInput]="'text'" formControlName="last_name"></app-section-input>
+      <app-section-input [myLabel]="'Correo'" [typeInput]="'text'" formControlName="email"></app-section-input>
+      <app-section-input [myLabel]="'Contraseña'" [typeInput]="'password'" formControlName="password"></app-section-input>
+      <app-section-input [myLabel]="'Confirmar contraseña'" [typeInput]="'password'" formControlName="password_confirmation"></app-section-input>
+      <app-section-input [myLabel]="'Locale'" [typeInput]="'text'" formControlName="locale"></app-section-input>
       <div class="section-buttons">
         <input class="button button-singUp" type="submit" value="Sing up"/>
-        <input class="button button-login" type="submit" [disabled]="!registerForm.valid" value="Login"/>
+        <input class="button button-login" type="submit" value="Login"/>
       </div>
     </form>
+    <button (click)="getData()">click</button>
+    <div ng-repeat="post in posts ">
+      {{ post | json }}
+    </div>
   </div>
